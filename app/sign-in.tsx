@@ -1,12 +1,17 @@
 import React from 'react'
-import {View} from "react-native";
-import {Text} from "react-native";
+import { ScrollView, Image} from "react-native";
+import {SafeAreaView} from "react-native-safe-area-context";
 
-function SignIn() {
+
+import images from "@/constants/images";
+
+const SignIn =() => {
     return (
-        <View>
-            <Text>Sign-in</Text>
-        </View>
+        <SafeAreaView className="bg-white h-full">
+            <ScrollView contentContainerClassName = "h-full">
+                <Image source={images.onboarding} className="w-full h-4/6" resizeMode="contain"/>
+            </ScrollView>
+        </SafeAreaView>
     )
 }
 
